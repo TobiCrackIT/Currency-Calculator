@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CurrCalc</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="curr_calc">Currency\nCalculator</string>
+    <string name="mid_market"><u>Mid-market exchange rate at 13:38 UTC.</u></string>
+
+    <string-array name="curr_array">
+        <item>CAN</item>
+        <item>EUR</item>
+        <item>NGN</item>
+        <item>USD</item>
+        <item>ZLN</item>
+    </string-array>
+
+</resources>

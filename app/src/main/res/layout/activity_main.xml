@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+    tools:context=".activity.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="727dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:scrollIndicators="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginEnd="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/ic_menus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/colorGreen"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="30dp"
+                android:textStyle="bold"
+                android:text="@string/curr_calc"
+                android:textColor="@color/colorBlue"
+                android:textSize="36sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="18dp"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/custom_edit_text_bg">
+
+                <EditText
+                    android:id="@+id/old_currency_edittext"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="24sp"
+                    android:inputType="numberDecimal"
+                    android:hint="1"
+                    android:background="@null"/>
+
+
+
+                <TextView
+                    android:id="@+id/old_currency_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="24sp"
+                    android:textColor="#aaaaaa"
+                    android:text="EUR"/>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="18dp"
+                android:paddingHorizontal="16dp"
+                android:background="@drawable/custom_edit_text_bg">
+
+                <EditText
+                    android:id="@+id/new_currency_edittext"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="24sp"
+                    android:inputType="numberDecimal"
+                    android:hint="20000"
+                    android:background="@null"/>
+
+
+
+                <TextView
+                    android:id="@+id/new_currency_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="24sp"
+                    android:textColor="#aaaaaa"
+                    android:text="PLN"/>
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="8dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/spinner_border"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/old_curr_flag"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        app:cardCornerRadius="25dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_launcher_background"/>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/origin_curr_TV"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:textSize="20sp"
+                        android:textColor="#aaaaaa"
+                        android:text="EUR"/>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="18dp"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"
+                            android:src="@drawable/ic_drop" />
+
+                        <Spinner
+                            android:id="@+id/spinner1"
+                            android:layout_width="5dp"
+                            android:paddingTop="18dp"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"
+                            android:background="@android:color/transparent"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown"/>
+
+
+
+                    </FrameLayout>
+
+
+
+
+
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.35"
+                    android:src="@drawable/ic_compare_arrows_black_24dp"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="8dp"
+                    android:background="@drawable/spinner_border"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/new_curr_flag"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        app:cardCornerRadius="25dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_launcher_background"/>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/dest_curr_spinner_textview"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:textSize="20sp"
+                        android:textColor="#aaaaaa"
+                        android:text="EUR"/>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="18dp"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"
+                            android:src="@drawable/ic_drop" />
+
+                        <Spinner
+                            android:id="@+id/spinner2"
+                            android:layout_width="5dp"
+                            android:paddingTop="18dp"
+                            android:layout_gravity="center"
+                            android:paddingRight="5dp"
+                            android:background="@android:color/transparent"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown"/>
+
+
+
+                    </FrameLayout>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <Button
+                android:id="@+id/convert_button"
+                android:layout_marginHorizontal="16dp"
+                android:text="Convert"
+                android:textColor="#ffffff"
+                android:textSize="24dp"
+                android:background="@drawable/convert_button_bg"
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textColor="@color/colorBlue"
+                android:textStyle="bold"
+                android:autoLink="web"
+                android:linksClickable="true"
+                android:text="@string/mid_market"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginBottom="-40dp"
+                android:layout_height="400dp"
+                app:cardBackgroundColor="@color/colorBlue"
+                app:cardCornerRadius="40dp">
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
